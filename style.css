@@ -14,14 +14,90 @@
   --color--light-yellow: #fbf6ea;
   --color--light-grey: #f4f4f4;
   --color--lavender: #f4f0f8;
+  --main-font--family: "inter", sans-serif;
+  --second--font--family: "Sen", sans-serif;
 }
+button {
+  max-width: 180px;
+  padding: 16px;
+  font-family: var(--second--font--family);
+  font-size: 18px;
+  color: var(--color--black);
+  border: none;
+  transition: 0.2s;
+}
+button:hover {
+  opacity: 0.9;
+  transform: scale(1.2);
+}
+.yellow-btn {
+  background: var(--color--yellow);
+}
+.white-btn {
+  cursor: url(assets/icons/plus.ico) 2 2, default;
+}
+
 a {
   text-decoration: none;
+}
+.link {
+  font-family: var(--second--font--family);
+  font-size: 16px;
+  color: var(--color--light);
+  white-space: nowrap;
+}
+.author-main-post {
+  color: var(--color--yellow);
+}
+
+/* Стили для текста  */
+.subtitle {
+  color: var(--color--light);
+  font-family: var(--main-font--family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  letter-spacing: 0.19em;
+  text-transform: uppercase;
+}
+.heading {
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 114%;
+  letter-spacing: -0.04em;
+  color: var(--color--light);
+}
+.post-info {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 175%;
+  color: var(--color--light);
+}
+
+.description {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 175%;
+  color: var(--color--light);
+}
+
+.container {
+  width: 100vw;
+  padding: 0 80px;
+  height: 100%;
+}
+
+/* Стили для блока HEADER */
+.header {
+  background-color: var(--color--black);
 }
 .header-container {
   background-color: var(--color--black);
   display: flex;
-  padding: 12px 80px;
+  padding: 12px 0px;
   align-items: center;
   justify-content: space-between;
 }
@@ -38,11 +114,22 @@ a {
   align-items: center;
   gap: 24px;
 }
-.link {
-  color: var(--color--light);
-  white-space: nowrap;
+
+/* Стили для блока HEADER */
+
+.main-post {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/assets/images/man-in-black-suit-wearing-eye-glasses-sitting-on-gray-sofa-using-macbook-3772622.png);
+  width: 100vw;
+  aspect-ratio: 2/1;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.subscribe-btn {
-  width: 180px;
-  padding: 16px;
+.container-main-post {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 32px;
+  width: 60%;
+  height: 100%;
 }
