@@ -20,36 +20,22 @@
   --second--font--family: "Sen", sans-serif;
 }
 
-/* Убрать горизонтальный скрол из-за width:100vw  */
-html {
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
-body {
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
-/* Убрать горизонтальный скрол из-за width:100vw  */
-
 section {
   margin-bottom: 128px;
 }
 
 .container {
   padding: 0 80px;
-  width: 99.5vw;
+  width: 100%;
   height: 100%;
 }
 
 /* Стили для кнопок */
 
 button {
-  max-width: 180px;
-  padding: 16px;
+  font-weight: 700;
+  width: fit-content;
+  padding: 16px 48px;
   font-family: var(--second--font--family);
   font-size: 18px;
   color: var(--color--black);
@@ -76,7 +62,6 @@ button:hover {
   border: none;
   padding: 0px;
   display: flex;
-  font-weight: 700;
   background-color: inherit;
 }
 
@@ -206,6 +191,16 @@ h6 {
   color: var(--color--medium--grey);
 }
 
+.author-position {
+  font-weight: 400;
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+}
+
+.author-position.medium-grey {
+  color: var(--color--medium--grey);
+}
+
 .black {
   color: var(--color--black);
 }
@@ -246,7 +241,7 @@ h6 {
 .main-post {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(/assets/images/main-post.png);
-  width: 100vw;
+  width: 100%;
   aspect-ratio: 2/1;
   background-repeat: no-repeat;
   background-size: cover;
@@ -356,7 +351,7 @@ h6 {
   margin-bottom: 48px;
 }
 
-.categories-section {
+.group-section {
   display: flex;
   gap: 32px;
 }
@@ -403,3 +398,93 @@ h6 {
 }
 
 /* Стили для блока CATEGORIES */
+
+/* Стили для блока MOTIVATION-STORIES */
+
+.background {
+  background: url(/assets/images/unity-people.png);
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 2/1;
+  background-repeat: no-repeat;
+  background-size: 75% 100%;
+  position: relative;
+}
+
+.motivation-story-section {
+  padding: 80px;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  max-width: 40%;
+  background-color: var(--color--white);
+}
+
+/* Стили для блока MOTIVATION-STORIES */
+
+/* Стили для блока AUTHORS */
+
+.author-section {
+  background-color: var(--color--low--grey);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 0 40px;
+  width: 25%;
+  transition: 0.2s;
+  cursor: pointer;
+  gap: 20px;
+}
+
+.author-section:hover {
+  background-color: var(--color--light--yellow);
+}
+
+.author-image {
+  width: 128px;
+  height: 128px;
+  border-radius: 100%;
+}
+
+.author-image.floyd-miles {
+  background-image: url(assets/images/floyd-miles.png);
+}
+
+.author-image.dianne-russell {
+  background-image: url(assets/images/dianne-russell.png);
+}
+
+.author-image.jenny-wilson {
+  background-image: url(assets/images/jenny-wilson.png);
+}
+
+.author-image.leslie-alexander {
+  background-image: url(assets/images/leslie-alexander.png);
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  transition: 0.2s;
+}
+
+.icons-section {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+svg:hover * {
+  fill: var(--color--purple);
+}
+.author-section > div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+}
+
+/* Стили для блока AUTHORS */
