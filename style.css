@@ -8,20 +8,29 @@
   --color--black: #232536;
   --color--yellow: #ffd050;
   --color--dark--grey: #4c4c4c;
-  --color--medium--grey: #d0d0d7;
+  --color--medium--grey: #6d6e76;
+  --color--low--grey: #b6b5b540;
   --color--purple: #592ea9;
   --color--light: #fff;
   --color--light--yellow: #fbf6ea;
   --color--light--grey: #f4f4f4;
   --color--lavender: #f4f0f8;
+  --color--white: #ffffff;
   --main--font--family: "Inter", sans-serif;
   --second--font--family: "Sen", sans-serif;
 }
 
 /* Убрать горизонтальный скрол из-за width:100vw  */
-html,
+html {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
-  overflow-y: auto;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 button {
@@ -32,6 +41,7 @@ button {
   color: var(--color--black);
   border: none;
   transition: 0.2s;
+  cursor: pointer;
 }
 
 button:hover {
@@ -87,6 +97,17 @@ h6 {
   cursor: url(assets/icons/plus.ico) 2 2, default;
 }
 
+.transperent-btn {
+  border: none;
+  padding: 0px;
+  display: flex;
+  font-weight: 700;
+}
+
+.transperent-btn:hover {
+  transform: none;
+}
+
 .link {
   font-family: var(--main--font--family);
   font-size: 16px;
@@ -113,7 +134,6 @@ h6 {
 }
 
 .subtitle {
-  color: var(--color--light);
   font-family: var(--main--font--family);
   font-weight: 500;
   font-size: 16px;
@@ -148,7 +168,7 @@ h6 {
 
 .container {
   padding: 0 80px;
-  width: 100vw;
+  width: 99.5vw;
   height: 100%;
 }
 
@@ -156,6 +176,7 @@ h6 {
 .header {
   background-color: var(--color--black);
 }
+
 .header-container {
   background-color: var(--color--black);
   display: flex;
@@ -163,14 +184,17 @@ h6 {
   align-items: center;
   justify-content: space-between;
 }
+
 :first-child .header-container {
   display: flex;
   align-items: center;
 }
+
 .nav-container {
   display: flex;
   gap: 32px;
 }
+
 .link-container {
   display: flex;
   align-items: center;
@@ -189,6 +213,7 @@ h6 {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .main-post-section {
   display: flex;
   flex-direction: column;
@@ -196,10 +221,16 @@ h6 {
   gap: 32px;
   height: 100%;
 }
+
 .description.light {
   color: var(--color--light);
 }
+
 .post-info.light {
+  color: var(--color--light);
+}
+
+.subtitle.light {
   color: var(--color--light);
 }
 
@@ -218,7 +249,7 @@ h6 {
   gap: 32px;
   margin-top: 32px;
   padding: 32px;
-  border: 1px solid var(--color--medium--grey);
+  border: 1px solid var(--color--low--grey);
 }
 
 .featured-post-section > div:first-child {
@@ -251,3 +282,62 @@ h6 {
 .author-post.purple {
   color: var(--color--purple);
 }
+
+/* Стили для блока POSTS  */
+
+/* Стили для блока ABOUT US */
+
+.color-header {
+  display: flex;
+  height: 20px;
+  width: 100%;
+}
+
+.white-section {
+  height: 100%;
+  width: 30%;
+  background-color: var(--color--white);
+}
+
+.yellow-section {
+  height: 100%;
+  width: 60%;
+  background-color: var(--color--yellow);
+}
+
+.purple-section {
+  height: 100%;
+  width: 30%;
+  background-color: var(--color--purple);
+}
+
+.about-us .container > div:last-child {
+  background-color: var(--color--lavender);
+  display: flex;
+  padding: 96px 80px;
+}
+
+.about-us-section {
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.about-us-section > .subtitle {
+  margin-bottom: 8px;
+}
+
+.subtitle.black {
+  color: var(--color--black);
+}
+
+.description.medium-grey {
+  color: var(--color--medium--grey);
+}
+
+.transperent-btn.purple {
+  color: var(--color--purple);
+}
+
+/* Стили для блока ABOUT US */
