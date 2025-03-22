@@ -7,16 +7,23 @@
 :root {
   --color--black: #232536;
   --color--yellow: #ffd050;
-  --color--dark-grey: #4c4c4c;
-  --color--medium-grey: #6d6e76;
+  --color--dark--grey: #4c4c4c;
+  --color--medium--grey: #d0d0d7;
   --color--purple: #592ea9;
   --color--light: #fff;
-  --color--light-yellow: #fbf6ea;
-  --color--light-grey: #f4f4f4;
+  --color--light--yellow: #fbf6ea;
+  --color--light--grey: #f4f4f4;
   --color--lavender: #f4f0f8;
-  --main-font--family: "inter", sans-serif;
+  --main--font--family: "Inter", sans-serif;
   --second--font--family: "Sen", sans-serif;
 }
+
+/* Убрать горизонтальный скрол из-за width:100vw  */
+html,
+body {
+  overflow-y: auto;
+}
+
 button {
   max-width: 180px;
   padding: 16px;
@@ -26,50 +33,106 @@ button {
   border: none;
   transition: 0.2s;
 }
+
 button:hover {
   opacity: 0.9;
   transform: scale(1.2);
 }
-.yellow-btn {
-  background: var(--color--yellow);
-}
-.white-btn {
-  cursor: url(assets/icons/plus.ico) 2 2, default;
+
+section {
+  margin-bottom: 128px;
 }
 
 a {
+  cursor: pointer;
   text-decoration: none;
 }
-.link {
+
+h1 {
+  font-family: var(--second--font--family);
+  font-size: 48px;
+}
+
+h2 {
+  font-family: var(--second--font--family);
+  font-size: 36px;
+}
+
+h3 {
+  font-family: var(--second--font--family);
+  font-size: 28px;
+}
+
+h4 {
+  font-family: var(--second--font--family);
+  font-size: 24px;
+}
+
+h5 {
+  font-family: var(--second--font--family);
+  font-size: 20px;
+}
+
+h6 {
   font-family: var(--second--font--family);
   font-size: 16px;
-  color: var(--color--light);
+}
+
+.yellow-btn {
+  background: var(--color--yellow);
+}
+
+.white-btn {
+  min-width: 180px;
+  cursor: url(assets/icons/plus.ico) 2 2, default;
+}
+
+.link {
+  font-family: var(--main--font--family);
+  font-size: 16px;
   white-space: nowrap;
 }
-.author-main-post {
+
+.link.light {
+  color: var(--color--light);
+}
+
+.link.yellow {
   color: var(--color--yellow);
+}
+.link.purple {
+  color: var(--color--purple);
 }
 
 /* Стили для текста  */
+.display-text {
+  font-weight: 700;
+  font-family: var(--second--font--family);
+  font-size: 56px;
+  color: var(--color--light);
+}
+
 .subtitle {
   color: var(--color--light);
-  font-family: var(--main-font--family);
+  font-family: var(--main--font--family);
   font-weight: 500;
   font-size: 16px;
   line-height: 125%;
   letter-spacing: 0.19em;
   text-transform: uppercase;
 }
+
 .heading {
-  font-family: var(--second-family);
+  font-family: var(--main--font--family);
   font-weight: 700;
   font-size: 56px;
   line-height: 114%;
   letter-spacing: -0.04em;
   color: var(--color--light);
 }
+
 .post-info {
-  font-family: var(--font-family);
+  font-family: var(--main--font--family);
   font-weight: 400;
   font-size: 16px;
   line-height: 175%;
@@ -77,16 +140,15 @@ a {
 }
 
 .description {
-  font-family: var(--font-family);
+  font-family: var(--main--font--family);
   font-weight: 400;
   font-size: 16px;
   line-height: 175%;
-  color: var(--color--light);
 }
 
 .container {
-  width: 100vw;
   padding: 0 80px;
+  width: 100vw;
   height: 100%;
 }
 
@@ -117,19 +179,75 @@ a {
 
 /* Стили для блока HEADER */
 
+/* Стили для блока MAIN POST */
+
 .main-post {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(/assets/images/man-in-black-suit-wearing-eye-glasses-sitting-on-gray-sofa-using-macbook-3772622.png);
+    url(/assets/images/main-post.png);
   width: 100vw;
   aspect-ratio: 2/1;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.container-main-post {
+.main-post-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 32px;
-  width: 60%;
   height: 100%;
+}
+.description.light {
+  color: var(--color--light);
+}
+.post-info.light {
+  color: var(--color--light);
+}
+
+/* Стили для блока MAIN POST */
+
+/* Стили для блока POSTS  */
+.featured-post-section {
+  overflow: hidden;
+  display: flex;
+  gap: 32px;
+}
+
+.main-featured-post-section {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-top: 32px;
+  padding: 32px;
+  border: 1px solid var(--color--medium--grey);
+}
+
+.featured-post-section > div:first-child {
+  max-width: 60%;
+}
+
+.all-posts-section > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.post-container {
+  padding: 32px;
+  cursor: pointer;
+  transition: 0.2s;
+  overflow: hidden;
+}
+.post-container:hover {
+  background-color: var(--color--light--yellow);
+}
+
+.black {
+  color: var(--color--black);
+}
+.post-info.black {
+  color: var(--color--black);
+}
+.author-post.purple {
+  color: var(--color--purple);
 }

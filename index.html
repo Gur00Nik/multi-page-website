@@ -6,6 +6,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sen:wght@400..800&display=swap"
       rel="stylesheet"
     />
@@ -13,7 +19,7 @@
     <title>Home</title>
   </head>
   <body>
-    <section class="header">
+    <header class="header">
       <div class="container">
         <div class="header-container">
           <div>
@@ -21,33 +27,101 @@
           </div>
           <div class="nav-container">
             <div class="link-container">
-              <a class="link" href="">Home</a>
-              <a class="link" href="">Blog</a>
-              <a class="link" href="">About Us</a>
-              <a class="link" href="">Contact Us</a>
+              <a class="link light" href="">Home</a>
+              <a class="link light" href="">Blog</a>
+              <a class="link light" href="">About Us</a>
+              <a class="link light" href="">Contact Us</a>
             </div>
             <button class="white-btn">Subscribe</button>
           </div>
         </div>
       </div>
-    </section>
+    </header>
     <section class="main-post">
       <div class="container">
-        <div class="container-main-post">
+        <div class="main-post-section">
           <div class="subtitle">posted on <b>startup</b></div>
-          <h1 class="heading">
+          <p class="display-text" class="heading">
             Step-by-step guide to choosing great font pairs
-          </h1>
+          </p>
           <div class="post-info">
-            By <a class="author-main-post">James West</a>
+            By <a class="link yellow">James West</a>
             | May 23, 2022
           </div>
-          <div class="description">
+          <div class="description light">
             Duis aute irure dolor in reprehenderit in voluptate velit esse
             cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
             cupidatat non proident.
           </div>
           <button class="yellow-btn">Read More ></button>
+        </div>
+      </div>
+    </section>
+    <section class="posts">
+      <div class="container">
+        <div class="featured-post-section">
+          <div>
+            <h2>Featured Post</h2>
+            <div class="main-featured-post-section">
+              <img
+                src="/assets/images/main-featured-post.png"
+                alt="image-main-featured-post"
+              />
+              <div class="post-info black">
+                By <a class="link purple">James West</a> | May 23, 2022
+              </div>
+              <h3>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor.
+              </h3>
+              <div class="description black">
+                Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                cupidatat non proident.
+              </div>
+              <button class="yellow-btn">Read More ></button>
+            </div>
+          </div>
+          <div class="all-posts-section">
+            <div>
+              <h2>All Posts</h2>
+              <a href="">View All</a>
+            </div>
+            <div class="all-posts-container">
+              <div class="post-container">
+                <div class="post-info black">
+                  By <a class="author-post purple">James West</a> | May 23, 2022
+                </div>
+                <h4 class="black">
+                  8 Figma design systems that you can download for free today.
+                </h4>
+              </div>
+              <div class="post-container">
+                <div class="post-info black">
+                  By <a class="link purple">James West</a> | May 23, 2022
+                </div>
+                <h4 class="black">
+                  8 Figma design systems that you can download for free today.
+                </h4>
+              </div>
+              <div class="post-container">
+                <div class="post-info black">
+                  By <a class="link purple">James West</a> | May 23, 2022
+                </div>
+                <h4 class="black">
+                  8 Figma design systems that you can download for free today.
+                </h4>
+              </div>
+              <div class="post-container">
+                <div class="post-info black">
+                  By <a class="link purple">James West</a> | May 23, 2022
+                </div>
+                <h4 class="black">
+                  8 Figma design systems that you can download for free today.
+                </h4>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
