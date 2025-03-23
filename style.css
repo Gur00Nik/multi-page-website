@@ -30,6 +30,15 @@ section {
   height: 100%;
 }
 
+.container.center {
+  display: flex;
+  justify-content: center;
+}
+
+svg {
+  transition: 0.2s;
+}
+
 /* Стили для кнопок */
 
 button {
@@ -71,6 +80,24 @@ button:hover {
 
 .transperent-btn.purple {
   color: var(--color--purple);
+}
+
+.circle-btn {
+  border-radius: 100%;
+  background-color: var(--color--light);
+  padding: 0;
+  width: 48px;
+  height: 48px;
+}
+
+.circle-btn svg {
+  border-radius: 100%;
+  fill: var(--color--black);
+}
+
+.circle-btn svg:hover {
+  fill: var(--color--light);
+  background-color: var(--color--black);
 }
 
 /* Стили для кнопок */
@@ -205,13 +232,19 @@ h6 {
   color: var(--color--black);
 }
 
+.medium-grey {
+  color: var(--color--medium--grey);
+}
+
+.white {
+  color: var(--color--white);
+}
 /* Стили для блока HEADER */
-.header {
+header {
   background-color: var(--color--black);
 }
 
 .header-container {
-  background-color: var(--color--black);
   display: flex;
   padding: 12px 0px;
   align-items: center;
@@ -252,6 +285,7 @@ h6 {
   flex-direction: column;
   justify-content: center;
   gap: 32px;
+  width: 60%;
   height: 100%;
 }
 
@@ -426,6 +460,12 @@ h6 {
 /* Стили для блока MOTIVATION-STORIES */
 
 /* Стили для блока AUTHORS */
+.authors .container > div:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 48px;
+}
 
 .author-section {
   background-color: var(--color--low--grey);
@@ -468,7 +508,12 @@ h6 {
 .icon {
   width: 16px;
   height: 16px;
-  transition: 0.2s;
+  transition: 0.2;
+  cursor: pointer;
+}
+
+.icon:hover path {
+  fill: var(--color--purple);
 }
 
 .icons-section {
@@ -477,9 +522,6 @@ h6 {
   gap: 16px;
 }
 
-svg:hover * {
-  fill: var(--color--purple);
-}
 .author-section > div:nth-child(2) {
   display: flex;
   flex-direction: column;
@@ -488,3 +530,141 @@ svg:hover * {
 }
 
 /* Стили для блока AUTHORS */
+
+/* Стили для блока COMPANY */
+
+.company-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.company.container > div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* Стили для блока COMPANY */
+
+/* Стили для блока RECOMENDATION */
+
+.recomendation .container > div:first-child {
+  display: flex;
+  padding: 90px 0;
+  background-color: var(--color--light--yellow);
+}
+
+.recomendation-section {
+  display: flex;
+  flex-direction: column;
+  padding: 0 90px;
+  gap: 16px;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.choice-author-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.choice-author-section div:first-child {
+  display: flex;
+  gap: 16px;
+}
+
+.description-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.author-image-choice {
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+}
+
+.btn-section {
+  display: flex;
+  gap: 16px;
+}
+
+.btn-section .circle-btn:first-child {
+  rotate: 180deg;
+}
+/* Стили для блока RECOMENDATION */
+
+/* Стили для блока JOIN */
+
+.join-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 35%;
+  gap: 16px;
+  text-align: center;
+}
+
+/* Стили для блока JOIN */
+
+/* Стили для блока FOOTER */
+
+footer {
+  background-color: var(--color--black);
+}
+
+.footer-container {
+  padding: 60px 0;
+}
+
+.footer-container > div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.input-email-section {
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 64px;
+  margin: 50px 0;
+  font-size: 16px;
+  display: flex;
+  gap: 64px;
+  background-color: rgb(255, 255, 255, 0.05);
+}
+
+.input-email-section div:last-child {
+  height: 56px;
+  display: flex;
+  width: 50%;
+  gap: 24px;
+  justify-content: space-between;
+}
+
+.footer-subtitle-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.h2-section {
+  width: 50%;
+}
+
+.footer-input {
+  border: 1px solid var(--color--medium--grey);
+  background-color: transparent;
+  padding: 14px 24px;
+  width: 100%;
+  color: var(--color--light);
+  font-size: 16px;
+  font-family: var(--second--font--family);
+}
+
+.footer-input:focus {
+  outline: none;
+}
+
+/* Стили для блока FOOTER */
