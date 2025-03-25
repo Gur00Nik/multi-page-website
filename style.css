@@ -115,7 +115,8 @@ a {
   white-space: nowrap;
 }
 
-.link.light {
+.link.header-footer {
+  font-size: 16px;
   color: var(--color--light);
 }
 
@@ -453,7 +454,8 @@ header {
   display: flex;
   gap: 16px;
   flex-direction: column;
-  max-width: 40%;
+  max-height: 100%;
+  max-width: 50%;
   background-color: var(--color--white);
 }
 
@@ -472,7 +474,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px 0 40px;
+  padding: 40px;
   width: 25%;
   transition: 0.2s;
   cursor: pointer;
@@ -484,6 +486,7 @@ header {
 }
 
 .author-image {
+  background-size: contain;
   width: 128px;
   height: 128px;
   border-radius: 100%;
@@ -525,6 +528,7 @@ header {
 .author-section > div:nth-child(2) {
   display: flex;
   flex-direction: column;
+  text-align: center;
   gap: 5px;
   align-items: center;
 }
@@ -535,14 +539,23 @@ header {
 
 .company-section {
   display: flex;
-  justify-content: space-between;
+  gap: 40px;
   align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  white-space: nowrap;
 }
 
-.company.container > div:first-child {
+.company-section div:first-child {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+}
+
+.company-section div:last-child {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 /* Стили для блока COMPANY */
@@ -668,3 +681,129 @@ footer {
 }
 
 /* Стили для блока FOOTER */
+
+/* MEADIA - запрос/адаптив под 1100px */
+
+@media screen and (max-width: 1165px) {
+  section {
+    margin-bottom: 64px;
+  }
+
+  button {
+    padding: 12px 36px;
+    font-size: 12px;
+  }
+
+  .white-btn {
+    min-width: auto;
+  }
+
+  h1 {
+    font-size: 42px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+
+  h4 {
+    font-size: 20px;
+  }
+
+  h5 {
+    font-size: 16px;
+  }
+
+  h6 {
+    font-size: 12px;
+  }
+
+  .container {
+    padding: 0 40px;
+  }
+
+  .display-text {
+    font-size: 40px;
+  }
+
+  .subtitle {
+    font-size: 12px;
+  }
+
+  .post-info {
+    font-size: 12px;
+  }
+
+  .description {
+    font-size: 12px;
+  }
+
+  .link {
+    font-size: 12px;
+  }
+
+  .main-post-section {
+    gap: 10px;
+  }
+
+  .featured-post-section {
+    gap: 16px;
+  }
+
+  .post-container {
+    padding: 16px;
+  }
+
+  .main-featured-post-section {
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .about-us .container > div:last-child {
+    padding: 24px 20px;
+  }
+
+  .categories .container > div:first-child {
+    margin-bottom: 24px;
+  }
+
+  .category-section {
+    padding: 8px;
+  }
+
+  .motivation-story-section {
+    padding: 12px;
+    max-height: 100%;
+    max-width: 50%;
+  }
+
+  .author-section {
+    padding: 20px;
+  }
+
+  .author-image {
+    width: 64px;
+    height: 64px;
+  }
+
+  .recomendation .container > div:first-child {
+    padding: 30px 0;
+  }
+
+  .recomendation-section {
+    padding: 0 30px;
+  }
+
+  .input-email-section div:last-child {
+    flex-direction: column;
+    gap: 10px;
+    height: auto;
+    align-items: center;
+  }
+}
+
+/* MEADIA - запрос/адаптив под 1100px */
